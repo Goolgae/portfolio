@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  width: 1400px;
+  height: 900px;
+  border: 2px solid slategray;
+}
+h2 {
+  text-align: center;
+  color: snow;
+  font-family: "Alata", sans-serif;
+  margin: 30px 0;
+}
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: 40px;
+  background-color: slategrey;
+  width: 300px;
+  height: 900px;
+}
+button {
+  padding: 14px;
+  border: 1px solid snow;
+  border-radius: 50%;
+}
+#red {
+  background-color: red;
+  outline: none;
+  margin-left: 60px;
+}
+#blue {
+  background-color: blue;
+  outline: none;
+}
+#black {
+  background-color: black;
+  outline: none;
+}
+#green {
+  background-color: green;
+  outline: none;
+}
+#yellow {
+  background-color: yellow;
+  outline: none;
+}

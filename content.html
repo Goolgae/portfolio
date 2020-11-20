@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head lang="ko">
+    <meta charset="UTF-8" />
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/content_style.css" />
+  </head>
+  <body>
+    <canvas id="main" width="1400" height="900"></canvas>
+    <section class="side-bar">
+      <h2>side-bar</h2>
+      <button id="red"></button>
+      <button id="blue"></button>
+      <button id="black"></button>
+      <button id="green"></button>
+      <button id="yellow"></button>
+    </section>
+    <script>
+      /* 캔버스를 이용하여 그림판은 구현해보았다. */
+      var garo, sero;
+      var draw = false;
+
+      var canvas = document.getElementById("main");
+      var ctx = canvas.getContext("2d");
+      var range = document.getElementById("range");
+      var bcr = canvas.getBoundingClientRect();
+      ctx.strokeStyle = "black";
+      ctx.lineJoin = "round";
+      ctx.lineWidth = range + "px";
+
+      $("#main").mousedown(function (e) {
+        garo = e.clientX - bcr.left;
+        sero = e.clientY - bcr.top;
+        draw = true;
+      });
+
+      $("#main").mousemove(function (e) {
+        if (draw) {
+          var drawX = e.clientX - bcr.left;
+          var drawY = e.clientY - bcr.top;
+
+          ctx.beginPath();
+          ctx.moveTo(garo, sero);
+          ctx.lineTo(drawX, drawY);
+          ctx.closePath();
+          ctx.stroke();
+          garo = drawX;
+          sero = drawY;
+        }
+      });
+
+      $("#main").mouseup(function (e) {
+        draw = false;
+        $("#red").click(function () {
+          ctx.strokeStyle = "red";
+        });
+        $("#blue").click(function () {
+          ctx.strokeStyle = "blue";
+        });
+        $("#black").click(function () {
+          ctx.strokeStyle = "black";
+        });
+        $("#green").click(function () {
+          ctx.strokeStyle = "green";
+        });
+        $("#yellow").click(function () {
+          ctx.strokeStyle = "yellow";
+        });
+      });
+    </script>
+  </body>
+</html>
