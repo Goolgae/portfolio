@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rice-pick</title>
+    <head>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+    </head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/rice-Style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1><img src="img/rice.png" alt="bowl" /></h1>
+    </header>
+    <section id="s1">
+      <div id="body_p">
+        <h2>식사 하셨나요?</h2>
+        <br />
+        <p id="form">밥 — 값하는 개발자 이선우입니다.</p>
+      </div>
+      <hr />
+      <article id="rise-rice">
+        <div id="rice">[우리 언어에 녹아 있는 밥의 의미]</div>
+        <p id="rice2">
+          '밥 먹으셨나요?' , '나중에 밥 한번 먹어요!' 와 같이 한국인에게 밥은
+          단순히 식(食)을 떠나 서로 간 <br />공동체임을 뜻하는 하나의 문화로
+          자리잡았습니다. 한국인의 밥과 같은 진심어린 공감을 통해
+          <br />사용자에게 더 나은 경험을 제공할 수 있는 개발자가 되고
+          싶습니다.<br />
+        </p>
+      </article>
+    </section>
+    <div class="loader" id="load" style="display: block">
+      <div class="inner">
+        <h1>선우가 밥에 담은 의미</h1>
+      </div>
+    </div>
+    <script>
+      setTimeout(function () {
+        var load = document.getElementById("load");
+        load.style.display = "none";
+      }, 5000);
+    </script>
+  </body>
+</html>
